@@ -1,3 +1,3 @@
-# shell_scripts
+# Basic shell script commands
 
 Creating basic shell scripts
