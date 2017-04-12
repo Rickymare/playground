@@ -4,41 +4,34 @@ set -e
 set -u
 
 # Update the APT cache 
-apt update
-
-# Pre-seed debconf with MySQL server answers PASSWORD DID NOT WORK
-export DEBIAN_FRONTEND="noninteractive" 
-debconf-set-selections <<< "mysql-server mysql-server/root_password password bean"
-debconf-set-selections <<< "mysql-server mysql-server/root_password_again password bean"
-
+apt update -y
+ 
+# Pre-seed debconf with MySQL server answers
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
+sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password password'
+ 
 # Install mySql server
-apt install mysql-server
-
-# NOTE: potentially initialize database?
-
-# Secure installation
-mysql_secure_installation
-
+sudo apt -y install mysql-server
+ 
 # Edit the bind address with ip address
-sed -i 's/bind-address.*/bind-address = 97.120.234.128' /etc/mysql/mysql.conf.d/mysql.cnf
+sed -i 's/bind-address/bind-address = 10.154.31.192/' /etc/mysql/mysql.conf.d/mysqld.cnf
 
 # Create usernames and passwords
-
+ 
 # Install PHP and its dependencies
-sudo apt install php libapache2-mod-php php-mcrypt php-mysql
-
-# Open dir.conf and prioritize index.php
+sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql
+ 
+# Edit dir.conf and prioritize index.php
 echo "
 <IfModule mod_dir.c>
-    DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+     DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>" >> /etc/apache2/mods-enabled/dir.conf
-
+ 
 # Restart the Apache2 server
 sudo systemctl restart apache2
-
+ 
 # Creating a file to test PHP on the server
-touch /var/www/html/info.php
-
 echo "<?php
 phpinfo();
 ?>" >> /var/www/html/info.php
+                                  
