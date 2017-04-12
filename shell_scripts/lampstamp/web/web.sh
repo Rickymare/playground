@@ -23,3 +23,8 @@ echo "
 
 # Restarting apache2
 sudo systemctl restart apache2
+
+# Creating a file to test php
+echo "<?php
+phpinfo();
+?>" >> /var/www/html/info.php
