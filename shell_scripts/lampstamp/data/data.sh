@@ -5,6 +5,9 @@ set -u
 
 # Update the APT cache 
 apt update -y
+
+# Upgrade
+sudo apt upgrade
  
 # Pre-seed debconf with MySQL server answers
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password password'
