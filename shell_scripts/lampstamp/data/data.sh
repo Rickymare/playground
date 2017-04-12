@@ -19,8 +19,6 @@ sudo apt -y install mysql-server
 # Edit the bind address with ip address
 sed -i 's/bind-address/bind-address = 10.154.31.192/' /etc/mysql/mysql.conf.d/mysqld.cnf
 
-# Create usernames and passwords
- 
 # Install PHP and its dependencies
 sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql
  
