@@ -21,9 +21,3 @@ sed -i 's/bind-address/bind-address = 10.154.31.192/' /etc/mysql/mysql.conf.d/my
 
 # Install PHP and its dependencies
 sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql
- 
-# Creating a file to test PHP on the server
-echo "<?php
-phpinfo();
-?>" >> /var/www/html/info.php
-                                  
