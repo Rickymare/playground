@@ -13,4 +13,4 @@ sudo apt -y upgrade
 sudo apt -y install apache2
 
 # Adding ServerName and IP
-echo "ServerName 10.154.31.65" >> /etc/apache2/apache2.conf
+echo "ServerName 10.154.31.45" >> /etc/apache2/apache2.conf
