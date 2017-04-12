@@ -8,3 +8,5 @@ sudo apt -y remove apache2
 # Remove MySql-server
 sudo apt -y remove mysql-server
 
+# Remove dependencies
+sudo apt autoremove
