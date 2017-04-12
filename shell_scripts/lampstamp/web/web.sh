@@ -19,7 +19,7 @@ echo "ServerName 10.154.31.45" >> /etc/apache2/apache2.conf
 echo "
 <IfModule mod_dir.c>
      DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-</IfModule>" >> /etc/apache2/mods-enabled/dir.conf
+</IfModule>" > /etc/apache2/mods-enabled/dir.conf
 
 # Restarting apache2
 sudo systemctl restart apache2
