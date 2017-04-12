@@ -10,4 +10,4 @@ sudo apt update
 sudo apt -y upgrade
 
 # Install Apache2
-sudo apt install apache2
+sudo apt -y install apache2
