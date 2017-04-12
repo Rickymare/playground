@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# create a file and write in it
+
+echo "stuff in stuff equals stuff!" >> ~/projects/playground/shell_scripts/stuff.txt
+
