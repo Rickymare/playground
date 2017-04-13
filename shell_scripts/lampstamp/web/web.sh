@@ -36,7 +36,7 @@ phpinfo();
 wget http://wordpress.org/latest.tar.gz -O ~/latest.tar.gz
 
 # Unzip the WordPress file
-tar xzvf latest.tar.gz
+tar xzvf ~/latest.tar.gz
 
 # Copy file
 cp ~/wordpress/wp-config-sample.php wp-config.php
