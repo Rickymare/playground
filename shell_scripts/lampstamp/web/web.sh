@@ -7,10 +7,10 @@ set -u
 sudo apt update
 
 # Upgrade
-sudo apt -y upgrade
+sudo apt upgrade -y
 
 # Install Apache2
-sudo apt -y install apache2
+sudo apt install apache2 -y
 
 # Adding ServerName and IP
 echo "ServerName 10.154.31.45" >> /etc/apache2/apache2.conf
@@ -25,7 +25,7 @@ echo "
 sudo systemctl restart apache2
 
 # Install PHP and its dependencies
-sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql php5-gd libssh2-php
+sudo apt install php libapache2-mod-php php-mcrypt php-mysql php-ssh2 -y
   
 # Creating a file to test PHP on the server
 echo "<?php
@@ -33,11 +33,15 @@ phpinfo();
 ?>" >> /var/www/html/info.php
 
 # Download Wordpress
-cd ~
-wget http://wordpress.org/latest.tar.gz
+wget http://wordpress.org/latest.tar.gz -O ~/latest.tar.gz
 
 # Unzip the WordPress file
 tar xzvf latest.tar.gz
 
 # Copy file
 cp ~/wordpress/wp-config-sample.php wp-config.php
+
+# Edit the wp-config file to include user, database, and password
+sed -i 's/define('DB_NAME'/define('DB_NAME', 'wordpress');/'
+sed -i 'define('DB_USER'/define('DB_USER', 'wordpressuser');'
+sed -i 'define('DB_PASSWORD'/define('DB_PASSWORD', 'password');/' /~/wordpress/wp-config.php
