@@ -25,7 +25,7 @@ echo "
 sudo systemctl restart apache2
 
 # Install PHP and its dependencies
-  sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql
+sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql php5-gd libssh2-php
   
 # Creating a file to test PHP on the server
 echo "<?php
