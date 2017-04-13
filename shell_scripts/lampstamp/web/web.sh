@@ -27,7 +27,7 @@ sudo systemctl restart apache2
 # Install PHP and its dependencies
   sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql
   
- # Creating a file to test PHP on the server
- -echo "<?php
- -phpinfo();
- -?>" >> /var/www/html/info.php
+# Creating a file to test PHP on the server
+echo "<?php
+phpinfo();
+?>" >> /var/www/html/info.php
