@@ -46,4 +46,6 @@ sed -i "/DB_NAME/c\define('DB_NAME', 'wordpress');/" ~/wordpress/wp-config.php
 
 sed -i "/DB_USER/c\define('DB_USER', 'wordpressuser');" ~/wordpress/wp-config.php
 
-sed -i "/DB_PASSWORD'/c\define('DB_PASSWORD', 'password');/" ~/wordpress/wp-config.php
+sed -i "/DB_PASSWORD/c\define('DB_PASSWORD', 'password');/" ~/wordpress/wp-config.php
+
+sed -p "/DB_HOST/c\define('DB_HOST', '10.154.31.45');" ~/wordpress/wp-config.php
