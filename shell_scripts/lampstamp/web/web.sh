@@ -39,7 +39,7 @@ wget http://wordpress.org/latest.tar.gz -O ~/latest.tar.gz
 tar xzvf ~/latest.tar.gz -C ~
 
 # Copy file
-cp ~/wordpress/wp-config-sample.php wp-config.php
+cp ~/wordpress/wp-config-sample.php ~/wordpress/wp-config.php
 
 # Edit the wp-config file to include user, database, and password
 sed -i "/DB_NAME/c\define('DB_NAME', 'wordpress');/" ~/wordpress/wp-config.php
