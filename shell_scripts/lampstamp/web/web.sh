@@ -31,3 +31,13 @@ sudo apt -y install php libapache2-mod-php php-mcrypt php-mysql php5-gd libssh2-
 echo "<?php
 phpinfo();
 ?>" >> /var/www/html/info.php
+
+# Download Wordpress
+cd ~
+wget http://wordpress.org/latest.tar.gz
+
+# Unzip the WordPress file
+tar xzvf latest.tar.gz
+
+# Copy file
+cp ~/wordpress/wp-config-sample.php wp-config.php
