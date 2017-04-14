@@ -1,5 +1,5 @@
-# Login to mysql
-mysql -u root -p
+# Login to mysql. Change password to user password.
+mysql -u root "-ppassword"
 
 # Create database
 CREATE DATABASE wordpress;
@@ -17,7 +17,6 @@ FLUSH PRIVILEGES;
 exit
 
 # Downloading the latest WordPress
-cd ~
 wget http://wordpress.org/latest.tar.gz
 
 # Unzip!
