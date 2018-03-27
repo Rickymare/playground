@@ -3,7 +3,7 @@
 
 ### Lamp Scripts
 
-LAMP scripts for installing LAMP with wordpress
+LAMPstamp scripts for installing LAMP with wordpress
 
 ### Technologies used
 
