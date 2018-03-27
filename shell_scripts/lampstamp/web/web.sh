@@ -19,7 +19,7 @@ sudo apt install php7.0 libapache2-mod-php7.0 php7.0-mcrypt php7.0-mysql php7.0-
 sudo apt install mysql-client -y
 
 # Adding ServerName and IP
-echo "ServerName localhost" >> /etc/apache2/apache2.conf
+sudo echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Edit dir.conf and prioritize index.php
 echo "
