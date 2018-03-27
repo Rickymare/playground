@@ -19,13 +19,13 @@ sudo apt install php7.0 libapache2-mod-php7.0 php7.0-mcrypt php7.0-mysql php7.0-
 sudo apt install mysql-client -y
 
 # Adding ServerName and IP
-sudo echo "ServerName localhost" >> /etc/apache2/apache2.conf
+echo "ServerName localhost" | sudo tee --append /etc/apache2/apache2.conf
 
 # Edit dir.conf and prioritize index.php
 echo "
 <IfModule mod_dir.c>
      DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-</IfModule>" > /etc/apache2/mods-enabled/dir.conf
+</IfModule>" | sudo tee /etc/apache2/mods-enabled/dir.conf
 
 # Download Wordpress
 wget http://wordpress.org/latest.tar.gz -O ~/latest.tar.gz
