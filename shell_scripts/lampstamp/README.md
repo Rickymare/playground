@@ -1,11 +1,9 @@
 # Lamp Stamp: A journey into the land of Linux
 
 
-### Objectives
+### Lamp Scripts
 
-1. Create a database server running MySQL
-1. Provision a web server running the Wordpress application
-1. Create an Amazon S3 bucket for use with [WP Offload S3](https://wordpress.org/plugins/amazon-s3-and-cloudfront/)
+LAMP scripts for installing LAMP with wordpress
 
 ### Technologies used
 
@@ -13,12 +11,6 @@
 * **A**pache HTTP Server
 * **M**ySQL RDBMS
 * **P**HP Hypertext Preprocessor
-
-
-### Future Plans
-
-* Include a Redis server for user sessions
-* Automate the entire process of deployment
 
 ### Resources:
 
