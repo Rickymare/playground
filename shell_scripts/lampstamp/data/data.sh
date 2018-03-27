@@ -17,7 +17,7 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again p
 sudo apt install mysql-server -y
  
 # Edit the bind address with ip address
-sudo sed -i 's/bind-address/bind-address = localhost/' /etc/mysql/mysql.conf.d/mysqld.cnf
+sed -i "/bind-address/c\bind-address = localhost" /etc/mysql/mysql.conf.d/mysqld.cnf
 
 # Create database. user, password, and grant privileges in MySQL
 mysql -uroot -ppassword -e "CREATE DATABASE wordpress;"
