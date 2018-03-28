@@ -56,3 +56,6 @@ sudo chown -R ubuntu:www-data /var/www/html
 
 # Restarting apache2
 sudo systemctl restart apache2
+
+# Confirming script is comple
+echo "Successfully completed"
