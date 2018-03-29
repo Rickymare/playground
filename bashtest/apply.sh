@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # I am about to run a.sh
 echo "I am about to run a.sh"
 ./a.sh
