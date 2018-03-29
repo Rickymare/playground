@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-# a.sh
-echo "I am the a.shell script and I am running"
-
-echo  "This is the first arguments passed to me $1"
+if [ $1 = "same" ]
+then
+	echo “I’m running on the same server as the other scripts”
+		
+elif [ $1 = "different" ]
+then
+	echo "I’m doing something completely different"
+		
+else
+	echo "Something unexpected happened"
+fi
