@@ -3,4 +3,4 @@
 # b.sh
 echo "I am the b.shell script and I am running"
 
-echo  "These are the arguments that were passed to me $@"
+echo  "This is the first arguments passed to me $1"
