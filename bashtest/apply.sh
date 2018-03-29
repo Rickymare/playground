@@ -5,12 +5,12 @@ echo "Is this running on the same server or different servers?"
 
 read ans
 
-echo "this is running on" $ans "servers"
+echo "This is running on $ans servers"
 
 # I am about to run a.sh
 echo "I am about to run a.sh"
-./a.sh
+./a.sh $ans
 
 # I am about to run b.sh
 echo "I am about to run b.sh"
-./b.sh
+./b.sh $ans
