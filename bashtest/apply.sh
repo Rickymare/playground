@@ -7,20 +7,22 @@ read ans
 
 if [ $ans = "different" ]
 then
-		echo "What is the name of server A?"
-		
-		read ans2
-
-		echo "What is the name of server B"?
-
-		read ans3
-
+	echo "What is the name of server A?"
+	read server_name_a
+	echo "What is the name of server B"?
+	read server_name_b
 fi
 
-# I am about to run a.sh
-echo "I am about to run a.sh"
-./a.sh $ans
+if [ -n $server_name_a ]
+then
+	./a.sh $ans $server_name_a
+else
+	./a.sh $ans
+fi
 
-# I am about to run b.sh
-echo "I am about to run b.sh"
-./b.sh $ans
+if [ -n $server_name_b ]
+then
+	./b.sh $ans $server_name_b
+else
+	./b.sh $ans
+fi
