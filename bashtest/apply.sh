@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Ask user is shell script is running on same server or different servers
+# Ask user if shell script is running on same server or different servers
 echo "Is this running on the same server or different servers?"
 
 read ans
