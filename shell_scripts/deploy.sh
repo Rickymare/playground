@@ -3,7 +3,7 @@
 set -e
 set -u
 
-# Ask user would they like to do?
+# Ask user what would they like to do?
 echo "What would you like to do?"
 echo "1. Deploy web task"
 echo "2. Deploy data task"
