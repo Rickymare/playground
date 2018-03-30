@@ -3,6 +3,14 @@
 set -e
 set -u
 
+web_tasks () {
+	echo "Executing web tasks"
+}
+
+data_tasks () {
+	echo "Executing data tasks"
+}
+
 # Ask user what would they like to do?
 echo "What would you like to do?"
 echo "1. Deploy web task"
@@ -13,20 +21,12 @@ read server
 
 if [ $server = "web" ]
 then
-    echo "Executing web tasks"
+    web_tasks
 elif [ $server = "data" ]
 then
-	echo "Executing data tasks"
+	data_tasks
 elif [ $server = "both" ]
 then
-	echo "Executing web tasks"
-	echo "Executing data tasks"
+	data_tasks
+	web_tasks
 fi
-
-web_task () {
-	echo "Executing web tasks"
-}
-
-data_tasks () {
-	echo "Executing data tasks"
-}
