@@ -12,13 +12,13 @@ echo "3. Deploy both"
 read server
 
 if [ $server = "web" ]
-then 
-		echo "Executing web tasks"
+then
+    echo "Executing web tasks"
 elif [ $server = "data" ]
 then
-		echo "Executing data tasks"
+	echo "Executing data tasks"
 elif [ $server = "both" ]
 then
-		echo "Executing web tasks"
-		echo "Executing data tasks"
+	echo "Executing web tasks"
+	echo "Executing data tasks"
 fi
