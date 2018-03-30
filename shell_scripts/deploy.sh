@@ -22,3 +22,11 @@ then
 	echo "Executing web tasks"
 	echo "Executing data tasks"
 fi
+
+web_task () {
+	echo "Executing web tasks"
+}
+
+data_tasks () {
+	echo "Executing data tasks"
+}
