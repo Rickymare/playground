@@ -29,7 +29,6 @@ elif [ $server = "both" ] || [ $server = "3" ]
 then
 	data_tasks
 	web_tasks
-elif [ $server != "web" ] || [ $server != "data" ] || [ $server != "both" ]
-then
+else
 	echo "Choose between 'web' 'data' or 'both'"
 fi
