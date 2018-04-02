@@ -19,13 +19,13 @@ echo "3. Deploy both"
 
 read server
 
-if [ $server = "web" ]
+if [ $server = "web" ] || [ $server = "1" ]
 then
     web_tasks
-elif [ $server = "data" ]
+elif [ $server = "data" ] || [ $server = "2" ]
 then
 	data_tasks
-elif [ $server = "both" ]
+elif [ $server = "both" ] || [ $server = "3" ]
 then
 	data_tasks
 	web_tasks
